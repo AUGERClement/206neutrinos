@@ -43,6 +43,8 @@ value = 0
 while (1):
     value = getNextValue()
     calcul.printNbValues(nb + 1)
+    stdDev = calcul.printStdDev(value, nb, arithmMean, stdDev)
     arithmMean = calcul.printArithmMean(value, nb, arithmMean)
     harmoMean = calcul.printHarmoMean(value, nb, harmoMean)
+    calcul.printQuadriMean(value, nb, stdDev)
     nb += 1
