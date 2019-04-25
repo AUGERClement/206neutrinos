@@ -20,7 +20,7 @@ def parser():
     harmoMean = intConvertisser(sys.argv[3])
     stdDev = intConvertisser(sys.argv[4])
     
-    if (harmoMean < 0 or stdDev < 0 or nb < 0):
+    if (harmoMean <= 0 or stdDev < 0 or nb < 0):
         quit (84)
     return nb, arithmMean, harmoMean, stdDev
 
@@ -37,12 +37,12 @@ def getNextValue():
     return value
 
 nb, arithmMean, harmoMean, stdDev = parser()
-print(nb, arithmMean, harmoMean, stdDev)
 
 value = 0
 
 while (1):
     value = getNextValue()
     calcul.printNbValues(nb + 1)
-    calcul.printArithmMean(value, nb, arithmMean)
+    arithmMean = calcul.printArithmMean(value, nb, arithmMean)
+    harmoMean = calcul.printHarmoMean(value, nb, harmoMean)
     nb += 1

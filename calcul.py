@@ -14,3 +14,9 @@ def printArithmMean(value, nb, arithmMean):
     newArithmMean = (arithmMean * nb + value) / (nb + 1)
     print("    Arithmetic mean:\t", "%.2f" % newArithmMean)
     return newArithmMean
+
+def printHarmoMean(value, nb, harmoMean):
+    sommeInv = nb / harmoMean
+    newHarmoMean = (nb + 1) / (sommeInv + (1 / value))
+    print("    Harmonic mean:\t", "%.2f" % newHarmoMean)
+    return newHarmoMean
