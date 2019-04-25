@@ -1,0 +1,48 @@
+#!/bin/python3
+
+from os import sys
+from os import sys
+import calcul
+
+def intConvertisser(intStr):
+    try:
+        result = int(intStr)
+    except:
+        quit (84)
+    return result
+
+def parser():
+    if (len(sys.argv) != 5):
+        quit (84)
+    
+    nb = intConvertisser(sys.argv[1])
+    arithmMean = intConvertisser(sys.argv[2])
+    harmoMean = intConvertisser(sys.argv[3])
+    stdDev = intConvertisser(sys.argv[4])
+    
+    if (harmoMean < 0 or stdDev < 0):
+        quit (84)
+    return nb, arithmMean, harmoMean, stdDev
+
+def getNextValue():
+    print("Enter next value:", end=' ', flush=True)
+    line = sys.stdin.readline()
+
+    if (line == "END\n"):
+        quit (0)
+    try:
+        value = int(line)
+    except:
+        quit (84)
+    return value
+
+nb, arithmMean, harmoMean, stdDev = parser()
+print(nb, arithmMean, harmoMean, stdDev)
+
+value = 0
+
+while (1):
+    value = getNextValue()
+    calcul.printNbValues(nb + 1)
+    calcul.printArithmMean(value, nb, arithmMean)
+    nb += 1
