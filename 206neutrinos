@@ -20,7 +20,7 @@ def parser():
     harmoMean = intConvertisser(sys.argv[3])
     stdDev = intConvertisser(sys.argv[4])
     
-    if (harmoMean < 0 or stdDev < 0):
+    if (harmoMean < 0 or stdDev < 0 or nb < 0):
         quit (84)
     return nb, arithmMean, harmoMean, stdDev
 
