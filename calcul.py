@@ -18,11 +18,11 @@ def printArithmMean(value, nb, arithmMean):
     print("    Arithmetic mean:\t", "%.2f" % newArithmMean)
     return newArithmMean
 
-def printQuadriMean(value, nb, stdDev):
-    squareSum = stdDev + pow(value, 2)
-    moyQuadra = sqrt(squareSum / (nb + 1))
-    print("    Quadratic mean:\t", "%.2f" % moyQuadra)
-    return 
+def printQuadriMean(value, nb, arithmMean, stdDev):
+    squareSum = (stdDev + pow(arithmMean, 2)) * (nb + 1)
+    moyQuadra = sqrt((squareSum / (nb + 1)))
+    print("    Root mean square:\t", "%.2f" % moyQuadra)
+    return
 
 def printHarmoMean(value, nb, harmoMean):
     sommeInv = nb / harmoMean

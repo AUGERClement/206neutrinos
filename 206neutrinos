@@ -45,6 +45,7 @@ while (1):
     calcul.printNbValues(nb + 1)
     stdDev = calcul.printStdDev(value, nb, arithmMean, stdDev)
     arithmMean = calcul.printArithmMean(value, nb, arithmMean)
+    calcul.printQuadriMean(value, nb, arithmMean, stdDev)
     harmoMean = calcul.printHarmoMean(value, nb, harmoMean)
-    calcul.printQuadriMean(value, nb, stdDev)
+    print()
     nb += 1
