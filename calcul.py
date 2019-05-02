@@ -7,9 +7,9 @@ def printNbValues(nb):
     print("    Number of values:\t", nb, sep='')
 
 def printStdDev(value, nb, arithmMean, stdDev):
-    squareSum = (stdDev + pow(arithmMean, 2)) * nb
+    squareSum = (pow(stdDev, 2) + pow(arithmMean, 2)) * nb
     tmpMean = (arithmMean * nb + value) / (nb + 1)
-    newStdDev = ((squareSum + pow(value, 2)) / (nb + 1)) - pow(tmpMean, 2)
+    newStdDev = sqrt((((squareSum + pow(value, 2)) / (nb + 1)) - pow(tmpMean, 2)))
     print("    Standard deviation:\t", "%.2f" % newStdDev)
     return newStdDev
 
