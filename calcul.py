@@ -19,7 +19,7 @@ def printArithmMean(value, nb, arithmMean):
     return newArithmMean
 
 def printQuadriMean(value, nb, arithmMean, stdDev):
-    squareSum = (stdDev + pow(arithmMean, 2)) * (nb + 1)
+    squareSum = (pow(stdDev, 2) + pow(arithmMean, 2)) * (nb + 1)
     moyQuadra = sqrt((squareSum / (nb + 1)))
     print("    Root mean square:\t", "%.2f" % moyQuadra)
     return
